@@ -24,8 +24,88 @@
 				<i class="fa-solid fa-bars fa-xl"></i>
 			</div>
 		</menu>
+		<div class="search-bar">
+			<form role="search" action="/search" method="get">
+				<label for="search-input">Buscar:</label>
+				<input type="search" id="search-input" name="q" placeholder="Buscar...">
+				<button type="submit">Buscar</button>
+			</form>
+		</div>
 		<main>
-			<p>Main</p>
+			<div class="best-seller">
+				<h2>Best Seller</h2>
+				<div class="product">
+					<div class="product-img">
+						<img src="assets/img/tacos.jpg" alt="tacos">
+					</div>
+					<div class="description">
+						<p>Tacos</p>
+					</div>
+				</div>
+			</div>
+			<div class="order-section">
+				<h2>Pide ahora</h2>
+				<div class="food-types">
+					<div class="food">
+						<img src="assets/img/pizza.png" alt="pizza">
+						<p>Pizza</p>
+					</div>
+					<div class="food">
+						<img src="assets/img/mexican.png" alt="taco">
+						<p>Mexicana</p>
+					</div>
+					<div class="food">
+						<img src="assets/img/nigiri.png" alt="sushi">
+						<p>Sushi</p>
+					</div>
+					<div class="food">
+						<img src="assets/img/te.png" alt="coffee">
+						<p>Café</p>
+					</div>
+					<div class="food">
+						<img src="assets/img/comida.png" alt="burger">
+						<p>Hamburguesa</p>
+					</div>
+					<div class="food">
+						<img src="assets/img/pasta.png" alt="pasta">
+						<p>Italiana</p>
+					</div>
+				</div>
+			</div>
+			<div class="last-orders">
+				<h2>Últimos pedidos</h2>
+				<div class="orders">
+					<div class="order-container">
+						<div class="order">
+							<div class="description">
+								<p>Papas Fritas</p>
+								<p>12 de Junio</p>
+							</div>
+							<div class="order-img">
+								<img src="assets/img/fried.jpeg" alt="fries">
+							</div>
+						</div>
+						<div class="order">
+							<div class="description">
+								<p>Cheesecake</p>
+								<p>12 de Junio</p>
+							</div>
+							<div class="order-img">
+								<img src="assets/img/cheesecake-slice.jpg" alt="cheesecake">
+							</div>
+						</div>
+						<div class="order">
+							<div class="description">
+								<p>Sandwich</p>
+								<p>12 de Junio</p>
+							</div>
+							<div class="order-img">
+								<img src="assets/img/sandwich.jpg" alt="sandwich">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer>
 			<p>Footer</p>
