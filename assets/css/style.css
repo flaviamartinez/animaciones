@@ -89,6 +89,7 @@ main{
 	"best";
 	grid-template-rows: 20% 80%;
 	grid-template-columns: 1fr;
+	height: 100%;
 }
 
 .order-section {
@@ -115,10 +116,9 @@ main{
 .food-types {
 	display: flex;
 	overflow-x: auto;
-	max-width: 100%;
 	/* border: 1px solid green; */
 	height: 80%;
-	width: 80%;
+	width: 80vw;
 	box-sizing: border-box;
 	align-items: center;
 	justify-content: flex-start;
@@ -162,18 +162,18 @@ main{
 .product-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
 	/* border: 1px solid green; */
 	height: 90%;
 	width: 100%;
 	justify-items: center;
 	align-items: center;
-	flex-grow: 1;
+	overflow-y: auto;
+	grid-auto-rows: minmax(250px, auto);
 }
 
 .product {
-	height: 80%;
-	width: 70%;
+	height: 90%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	display: flex;
@@ -186,7 +186,7 @@ main{
 }
 
 .product-img {
-	height: 70%;
+	height: 100%;
 	width: 100%;
 	/* border: 1px solid salmon; */
 	overflow: hidden;
@@ -224,7 +224,7 @@ main{
 	/* border: 1px solid black; */
 	flex-grow: 1;
 	width: 100%;
-	padding-left: 0.8rem;
+	padding: 0.8rem;
 	box-sizing: border-box;
 }
 
