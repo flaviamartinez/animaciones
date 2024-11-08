@@ -22,56 +22,54 @@ body {
 	grid-template-rows: 1.5fr 1fr 75% 1.5fr;
 }
 
-menu {
+nav {
     grid-area: menu;
     display: flex;
-    align-items: center; /* Alinea logo y enlaces verticalmente */
+    align-items: center;
     justify-content: space-between;
-	box-sizing: border-box;
+    height: 100%;
     padding: 0 1rem;
     gap: 5px;
-    height: 100%; /* Asegura que logo y enlaces tengan la misma altura */
+	box-sizing: border-box;
+	color: #C63D2F;
 }
 
 .logo {
     display: flex;
-    align-items: center; /* Alinea logo y texto verticalmente */
+    align-items: center;
     gap: 5px;
+}
+
+.logo img {
+	height: clamp(50px, 4vw, 100px);
+	width: auto;
 }
 
 .logo h1 {
     font-weight: 600;
 	font-size: clamp(2rem, 4vw, 4rem);
     font-family: "Bebas Neue", sans-serif;
-    color: #C63D2F;
     white-space: nowrap;
-
-}
-
-.logo img {
-    height: clamp(50px, 4vw, 100px);
-    width: auto;
 }
 
 .menu-links {
     display: flex;
-    align-items: center; /* Alinea enlaces al centro verticalmente */
+    align-items: center;
     gap: 15px;
-    color: #C63D2F;
     list-style: none;
 }
 
 .menu-links a {
     text-decoration: none;
     color: inherit;
-    font-size: clamp(0.8rem, 2vw, 1rem); /* Tamaño fijo para consistencia */
+    font-size: clamp(0.8rem, 2vw, 1rem);
     text-align: center;
     line-height: 1.2;
     display: inline-block;
 }
 
 .menu-links a:active {
-    color: #ff6600; /* Cambia a un color de clic temporal */
+    color: #ff6600;
 }
 
 .search-bar {
@@ -85,7 +83,6 @@ menu {
 
 .bar {
 	width: 90%;
-	/* Puedes ajustar el ancho */
 	display: flex;
 	padding: 10px 15px;
 	justify-content: space-between;
@@ -104,8 +101,7 @@ menu {
 }
 
 .bar input::placeholder {
-    color: #b50909; /* Cambia este color según tus necesidades */
-    opacity: 1; /* Para que el color se aplique sin transparencia */
+    color: #b50909;
 }
 
 .bar button {
@@ -117,7 +113,6 @@ menu {
 
 main {
 	grid-area: main;
-	/* border: 1px solid blue; */
 	display: grid;
 	grid-template-areas:
 		"order"
@@ -129,7 +124,6 @@ main {
 
 .order-section {
 	grid-area: order;
-	/* border: 1px solid brown; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -137,28 +131,23 @@ main {
 	box-sizing: border-box;
 	background-color: transparent;
 	transition: background-color 0.5s ease;
-	/* overflow-x: auto; */
-	/* gap: 1rem; */
 }
 
-/* Definir la animación para el fondo temporal */
 @keyframes highlight-bg {
     0% {
-        background-color: rgba(241, 199, 177, 0.3); /* Color temporal */
+        background-color: rgba(241, 199, 177, 0.3);
     }
     100% {
-        background-color: transparent; /* Vuelve al color original */
+        background-color: transparent;
     }
 }
 
-/* Aplicar la animación solo cuando la sección es el objetivo */
 .order-section:target {
-    animation: highlight-bg 2s ease forwards; /* Animación de 2 segundos */
+    animation: highlight-bg 2s ease forwards;
 }
 
 .order-section h2 {
 	align-self: flex-start;
-	/* border: 1px solid black; */
 	flex-grow: 1;
 	font-weight: 400;
 	padding-left: 1rem;
@@ -169,7 +158,6 @@ main {
 .food-types {
 	display: flex;
 	overflow-x: auto;
-	/* border: 1px solid green; */
 	height: 90%;
 	width: 80vw;
 	box-sizing: border-box;
@@ -178,7 +166,6 @@ main {
 }
 
 .food {
-	/* border: 1px solid black; */
 	height: 5rem;
 	width: 5rem;
 	box-sizing: border-box;
@@ -195,26 +182,23 @@ main {
 .food img {
 	height: 50%;
 	width: 50%;
-	transition: transform 0.1s ease-in-out; /* Controla la suavidad y velocidad de la transición */
+	transition: transform 0.1s ease-in-out;
 }
 
 .food img:hover {
-    transform: translateX(-5px) rotate(-3deg); /* Primer movimiento de sacudida */
-    transition: transform 0.1s ease-in-out;
+    transform: translateX(-5px) rotate(-3deg);
 }
 
 .best-seller {
 	grid-area: best;
-	/* border: 1px solid pink; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	transition: background-color 0.5s ease;
 }
 
-/* Aplicar la animación solo cuando la sección es el objetivo */
 .best-seller:target {
-    animation: highlight-bg 2s ease forwards; /* Animación de 2 segundos */
+    animation: highlight-bg 2s ease forwards;
 }
 
 .best-seller h2 {
@@ -227,7 +211,6 @@ main {
 .product-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	/* border: 1px solid green; */
 	height: 90%;
 	width: 100%;
 	justify-items: center;
@@ -241,11 +224,8 @@ main {
 	width: 90%;
 	display: flex;
 	flex-direction: column;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 	align-self: center;
-	/* border: 1px solid green; */
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -253,7 +233,6 @@ main {
 .product-img {
 	height: 100%;
 	width: 100%;
-	/* border: 1px solid salmon; */
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -269,16 +248,12 @@ main {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* transition: transform 0.5s ease; */
 	filter: blur(5px);
-	/* Imagen desenfocada */
 	transition: filter 0.5s ease;
 
 }
 
-
 .product-img img:hover {
-	/* transform: scale(1.1);  */
 	filter: blur(0);
 }
 
@@ -287,7 +262,6 @@ main {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	/* border: 1px solid black; */
 	flex-grow: 1;
 	width: 100%;
 	padding: 0.8rem;
@@ -314,7 +288,6 @@ footer {
 	grid-area: footer;
 	display: flex;
 	gap: 0.8rem;
-	/* border: 1px solid green */
 	background-color: #E25E3E;
 	color: white;
 	font-weight: 300;
@@ -325,19 +298,17 @@ footer {
 	transition: background-color 0.5s ease;
 }
 
-/* Definir la animación para el fondo temporal */
 @keyframes highlight-footer {
     0% {
-        background-color: rgba(241, 199, 177, 0.3); /* Color temporal */
+        background-color: rgba(241, 199, 177, 0.3);
     }
     100% {
-        background-color: #E25E3E; /* Vuelve al color original */
+        background-color: #E25E3E;
     }
 }
 
-/* Aplicar la animación solo cuando la sección es el objetivo */
 footer:target {
-    animation: highlight-footer 2s ease forwards; /* Animación de 2 segundos */
+    animation: highlight-footer 2s ease forwards;
 }
 
 footer h2 {
@@ -373,19 +344,15 @@ footer h2 {
 	display: flex;
 	gap: 0.5rem;
 	justify-content: center;
-	/* align-content: center; */
 }
 
 .social i {
 	font-size: 24px;
-	/* Tamaño inicial */
 	transition: transform 0.3s ease;
-	/* Suaviza la animación */
 }
 
 .social i:hover {
 	transform: scale(1.5);
-	/* Agranda el icono en hover */
 }
 
 .form-container {
@@ -393,6 +360,10 @@ footer h2 {
 	flex-direction: column;
 	text-align: start;
 	gap: 2px;
+}
+
+.form-container p{
+	display: none;
 }
 
 .form {
@@ -419,10 +390,6 @@ footer h2 {
 	color: white;
 }
 
-.form-container p{
-	display: none;
-}
-
 @media (min-width: 992px) {
 	.grid-container {
 		grid-template-areas:
@@ -433,27 +400,21 @@ footer h2 {
 		grid-template-rows: 10% 80% 10%;
 	}
 
+	nav {
+		justify-content: start;
+		gap: 1.5rem;
+		padding: 1rem 1rem;
+		text-align: center;
+	}
+
 	.bar {
 		height: 30%;
 		margin: 0 0;
 		flex-shrink: 1;
 	}
 
-	menu {
-		justify-content: start;
-		align-items: center;
-		gap: 1.5rem;
-		padding: 1rem 1rem;
-		text-align: center;
-	}
-
-	.hamburger {
-		display: none;
-	}
-
 	main {
 		grid-area: main;
-		/* border: 1px solid blue; */
 		display: grid;
 		grid-template-areas:
 			"order best";
@@ -464,71 +425,42 @@ footer h2 {
 
 	.order-section {
 		grid-area: order;
-		/* border: 1px solid brown; */
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
 		height: 100%;
-		box-sizing: border-box;
-		/* overflow-x: auto; */
-		/* gap: 1rem; */
 	}
 
 	.order-section h2 {
 		align-self: center;
 		text-align: center;
-		/* border: 1px solid black; */
 		flex-grow: 0;
-		font-weight: 400;
 		padding: 1rem 1rem;
 		font-size: 1.5vw;
-	
 	}
 
 	.food-types {
 		display: flex;
 		flex-direction: column;
 		overflow-x: auto;
-		/* border: 1px solid green; */
 		height: 100%;
 		width: 100%;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: flex-start;
-		/* margin-bottom: 50px; */
-	}
-
-	.product-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		/* border: 1px solid green; */
-		height: 100%;
-		width: 100%;
-		justify-items: center;
-		align-items: center;
-		overflow-y: scroll;
-		grid-auto-rows: minmax(300px, auto);
-		margin-top: 5px;
-		/* padding-bottom: 300px; */
 	}
 
 	.best-seller h2 {
 		font-size: 1.5vw;
 	}
 
+	.product-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		height: 100%;
+		width: 100%;
+		overflow-y: scroll;
+		grid-auto-rows: minmax(300px, auto);
+		margin-top: 5px;
+	}
+
 	.product {
 		height: 90%;
 		width: 90%;
-		display: flex;
-		flex-direction: column;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		align-self: center;
-		/* border: 1px solid green; */
-		border-radius: 10px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	.form-description {
@@ -542,11 +474,11 @@ footer h2 {
 		font-size: 1.5vh;
 	}
 
-	.form button{
-		flex-grow: 1;
-	}
-
 	#email {
 		flex-grow: 10;
+	}
+
+	.form button{
+		flex-grow: 1;
 	}
 }
