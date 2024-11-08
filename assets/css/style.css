@@ -59,7 +59,7 @@ menu {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #e0e0e0;
+	background-color: #fbe9ac;
 	padding: 10px 15px;
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,7 +71,7 @@ menu {
 	outline: none;
 	flex-grow: 1;
 	font-size: 16px;
-	background-color: #e0e0e0;
+	background-color: #fbe9ac;
 }
 
 .search-bar button {
@@ -156,8 +156,7 @@ main {
 .best-seller h2 {
 	align-self: flex-start;
 	font-weight: 400;
-	padding-left: 1rem;
-	padding-top: 0.8rem;
+	padding: 1rem 1rem;
 }
 
 .product-container {
@@ -241,7 +240,7 @@ main {
 }
 
 .price {
-	color: rgb(44, 190, 44);
+	color: #c63d2f;
 	font-weight: 300;
 	font-size: 1.5vh;
 }
@@ -251,7 +250,7 @@ footer {
 	display: flex;
 	gap: 0.8rem;
 	/* border: 1px solid green */
-	background-color: rgb(57, 142, 57);
+	background-color: #E25E3E;
 	color: white;
 	font-weight: 300;
 	text-align: center;
@@ -319,7 +318,7 @@ footer h2 {
 	}
 
 	.search-bar {
-		height: 50%;
+		height: 30%;
 		align-self: center;
 		margin: 0 0;
 	}
@@ -401,10 +400,6 @@ footer h2 {
 	}
 
 	.best-seller h2 {
-		align-self: flex-start;
-		font-weight: 400;
-		padding-left: 1rem;
-		padding: 1rem 1rem;
 		font-size: 1.5vw;
 	}
 
