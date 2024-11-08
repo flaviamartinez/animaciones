@@ -388,6 +388,41 @@ footer h2 {
 	/* Agranda el icono en hover */
 }
 
+.form-container {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	gap: 2px;
+}
+
+.form {
+	display: flex;
+	gap: 2px;
+}
+
+#email {
+	border: none;
+	border-radius: 3px;
+	padding-left: 3px;
+}
+
+.form button {
+	background-color: white;
+	border: none;
+	border-radius: 3px;
+	padding: 2px;
+	color: grey;
+}
+
+.form button:hover{
+	background-color: #E25E3E;
+	color: white;
+}
+
+.form-container p{
+	display: none;
+}
+
 @media (min-width: 992px) {
 	.grid-container {
 		grid-template-areas:
@@ -494,5 +529,24 @@ footer h2 {
 		/* border: 1px solid green; */
 		border-radius: 10px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.form-description {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.form-container p{
+		display: block;
+		font-size: 1.5vh;
+	}
+
+	.form button{
+		flex-grow: 1;
+	}
+
+	#email {
+		flex-grow: 10;
 	}
 }
