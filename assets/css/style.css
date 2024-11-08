@@ -48,8 +48,21 @@ menu {
 	width: auto;
 }
 
+
 .menu-links {
-	display: none;
+	display: flex;
+	gap: 15px;
+	color: #C63D2F;
+	list-style: none;
+}
+
+.menu-links a {
+    text-decoration: none;
+	color: inherit;
+}
+
+.menu-links a:active {
+    color: #ff6600; /* Cambia a un color de clic temporal */
 }
 
 .search-bar {
@@ -60,7 +73,7 @@ menu {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #f7b8b8;
+	background-color: #f8d3d3;
 	padding: 10px 15px;
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -72,7 +85,7 @@ menu {
 	outline: none;
 	flex-grow: 1;
 	font-size: 16px;
-	background-color: #f7b8b8;
+	background-color: #f8d3d3;
 }
 
 .search-bar input::placeholder {
@@ -107,8 +120,25 @@ main {
 	align-items: center;
 	width: 100%;
 	box-sizing: border-box;
+	background-color: transparent;
+	transition: background-color 0.5s ease;
 	/* overflow-x: auto; */
 	/* gap: 1rem; */
+}
+
+/* Definir la animación para el fondo temporal */
+@keyframes highlight-bg {
+    0% {
+        background-color: rgba(241, 199, 177, 0.3); /* Color temporal */
+    }
+    100% {
+        background-color: transparent; /* Vuelve al color original */
+    }
+}
+
+/* Aplicar la animación solo cuando la sección es el objetivo */
+.order-section:target {
+    animation: highlight-bg 2s ease forwards; /* Animación de 2 segundos */
 }
 
 .order-section h2 {
@@ -164,6 +194,12 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	transition: background-color 0.5s ease;
+}
+
+/* Aplicar la animación solo cuando la sección es el objetivo */
+.best-seller:target {
+    animation: highlight-bg 2s ease forwards; /* Animación de 2 segundos */
 }
 
 .best-seller h2 {
@@ -271,6 +307,22 @@ footer {
 	justify-content: space-around;
 	align-items: center;
 	height: 100%;
+	transition: background-color 0.5s ease;
+}
+
+/* Definir la animación para el fondo temporal */
+@keyframes highlight-footer {
+    0% {
+        background-color: rgba(241, 199, 177, 0.3); /* Color temporal */
+    }
+    100% {
+        background-color: #E25E3E; /* Vuelve al color original */
+    }
+}
+
+/* Aplicar la animación solo cuando la sección es el objetivo */
+footer:target {
+    animation: highlight-footer 2s ease forwards; /* Animación de 2 segundos */
 }
 
 footer h2 {
@@ -343,12 +395,6 @@ footer h2 {
 		padding: 2rem 1rem;
 		gap: 1.5rem;
 		text-align: center;
-	}
-
-	.menu-links {
-		display: flex;
-		gap: 15px;
-		color: #C63D2F;
 	}
 
 	.hamburger {
