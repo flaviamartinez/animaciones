@@ -23,42 +23,50 @@ body {
 }
 
 menu {
-	grid-area: menu;
-	/* border: 1px solid red; */
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 2rem;
+    grid-area: menu;
+    display: flex;
+    align-items: center; /* Alinea logo y enlaces verticalmente */
+    justify-content: space-between;
+    padding: 0 1rem;
+    gap: 5px;
+    height: 70px; /* Asegura que logo y enlaces tengan la misma altura */
 }
 
 .logo {
-	display: flex;
-	align-items: end;
-	gap: 5px;
+    display: flex;
+    align-items: center; /* Alinea logo y texto verticalmente */
+    gap: 5px;
 }
 
 .logo h1 {
-	font-weight: 600;
-	font-family: "Bebas Neue", sans-serif;
-	color: #C63D2F;
+    font-weight: 600;
+	font-size: clamp(2rem, 4vw, 5rem);
+    font-family: "Bebas Neue", sans-serif;
+    color: #C63D2F;
+    white-space: nowrap;
+
 }
 
 .logo img {
-	height: 50px;
-	width: auto;
+    height: clamp(50px, 4vw, 100px);
+    width: auto;
 }
 
-
 .menu-links {
-	display: flex;
-	gap: 15px;
-	color: #C63D2F;
-	list-style: none;
+    display: flex;
+    align-items: center; /* Alinea enlaces al centro verticalmente */
+    gap: 15px;
+    color: #C63D2F;
+    list-style: none;
 }
 
 .menu-links a {
     text-decoration: none;
-	color: inherit;
+    color: inherit;
+    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Tamaño fijo para consistencia */
+    text-align: center;
+    line-height: 1.2;
+    display: inline-block;
 }
 
 .menu-links a:active {
@@ -387,13 +395,14 @@ footer h2 {
 		height: 30%;
 		align-self: center;
 		margin: 0 0;
+		flex-shrink: 1;
 	}
 
 	menu {
 		justify-content: start;
 		align-items: center;
-		padding: 2rem 1rem;
 		gap: 1.5rem;
+		padding: 1rem 1rem;
 		text-align: center;
 	}
 
