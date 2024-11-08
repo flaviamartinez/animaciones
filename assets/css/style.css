@@ -27,9 +27,10 @@ menu {
     display: flex;
     align-items: center; /* Alinea logo y enlaces verticalmente */
     justify-content: space-between;
+	box-sizing: border-box;
     padding: 0 1rem;
     gap: 5px;
-    height: 70px; /* Asegura que logo y enlaces tengan la misma altura */
+    height: 100%; /* Asegura que logo y enlaces tengan la misma altura */
 }
 
 .logo {
@@ -40,7 +41,7 @@ menu {
 
 .logo h1 {
     font-weight: 600;
-	font-size: clamp(2rem, 4vw, 5rem);
+	font-size: clamp(2rem, 4vw, 4rem);
     font-family: "Bebas Neue", sans-serif;
     color: #C63D2F;
     white-space: nowrap;
@@ -63,7 +64,7 @@ menu {
 .menu-links a {
     text-decoration: none;
     color: inherit;
-    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Tamaño fijo para consistencia */
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Tamaño fijo para consistencia */
     text-align: center;
     line-height: 1.2;
     display: inline-block;
@@ -75,11 +76,15 @@ menu {
 
 .search-bar {
 	grid-area: search;
+	height: 100%;
+	justify-items: center;
+	align-content: center;
+}
+
+.bar {
 	width: 90%;
 	/* Puedes ajustar el ancho */
-	justify-self: center;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 	background-color: #f8d3d3;
 	padding: 10px 15px;
@@ -88,7 +93,7 @@ menu {
 	margin-bottom: 10px;
 }
 
-.search-bar input {
+.bar input {
 	border: none;
 	outline: none;
 	flex-grow: 1;
@@ -96,12 +101,12 @@ menu {
 	background-color: #f8d3d3;
 }
 
-.search-bar input::placeholder {
+.bar input::placeholder {
     color: #b50909; /* Cambia este color según tus necesidades */
     opacity: 1; /* Para que el color se aplique sin transparencia */
 }
 
-.search-bar button {
+.bar button {
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -163,7 +168,7 @@ main {
 	display: flex;
 	overflow-x: auto;
 	/* border: 1px solid green; */
-	height: 80%;
+	height: 90%;
 	width: 80vw;
 	box-sizing: border-box;
 	align-items: center;
@@ -230,7 +235,7 @@ main {
 }
 
 .product {
-	height: 90%;
+	height: 80%;
 	width: 90%;
 	display: flex;
 	flex-direction: column;
@@ -391,9 +396,8 @@ footer h2 {
 		grid-template-rows: 10% 80% 10%;
 	}
 
-	.search-bar {
+	.bar {
 		height: 30%;
-		align-self: center;
 		margin: 0 0;
 		flex-shrink: 1;
 	}
@@ -418,7 +422,7 @@ footer h2 {
 			"order best";
 		grid-template-columns: 10% 90%;
 		grid-template-rows: 1fr;
-		overflow: hidden;
+		overflow: scroll;
 	}
 
 	.order-section {
@@ -450,23 +454,26 @@ footer h2 {
 		flex-direction: column;
 		overflow-x: auto;
 		/* border: 1px solid green; */
-		height: 65%;
+		height: 100%;
 		width: 100%;
 		box-sizing: border-box;
 		align-items: center;
 		justify-content: flex-start;
+		/* margin-bottom: 50px; */
 	}
 
 	.product-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		/* border: 1px solid green; */
-		height: 70%;
+		height: 100%;
 		width: 100%;
 		justify-items: center;
 		align-items: center;
-		overflow-y: auto;
+		overflow-y: scroll;
 		grid-auto-rows: minmax(300px, auto);
+		margin-top: 5px;
+		/* padding-bottom: 300px; */
 	}
 
 	.best-seller h2 {
