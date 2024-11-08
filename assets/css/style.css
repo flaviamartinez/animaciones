@@ -40,6 +40,7 @@ menu {
 .logo h1 {
 	font-weight: 600;
 	font-family: "Bebas Neue", sans-serif;
+	color: #C63D2F;
 }
 
 .logo img {
@@ -59,7 +60,7 @@ menu {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #fbe9ac;
+	background-color: #f7b8b8;
 	padding: 10px 15px;
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,7 +72,12 @@ menu {
 	outline: none;
 	flex-grow: 1;
 	font-size: 16px;
-	background-color: #fbe9ac;
+	background-color: #f7b8b8;
+}
+
+.search-bar input::placeholder {
+    color: #b50909; /* Cambia este color según tus necesidades */
+    opacity: 1; /* Para que el color se aplique sin transparencia */
 }
 
 .search-bar button {
@@ -111,6 +117,7 @@ main {
 	flex-grow: 1;
 	font-weight: 400;
 	padding-left: 1rem;
+	color: #C63D2F;
 
 }
 
@@ -143,6 +150,12 @@ main {
 .food img {
 	height: 50%;
 	width: 50%;
+	transition: transform 0.1s ease-in-out; /* Controla la suavidad y velocidad de la transición */
+}
+
+.food img:hover {
+    transform: translateX(-5px) rotate(-3deg); /* Primer movimiento de sacudida */
+    transition: transform 0.1s ease-in-out;
 }
 
 .best-seller {
@@ -157,6 +170,7 @@ main {
 	align-self: flex-start;
 	font-weight: 400;
 	padding: 1rem 1rem;
+	color: #C63D2F;
 }
 
 .product-container {
@@ -334,6 +348,7 @@ footer h2 {
 	.menu-links {
 		display: flex;
 		gap: 15px;
+		color: #C63D2F;
 	}
 
 	.hamburger {
